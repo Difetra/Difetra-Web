@@ -1,0 +1,191 @@
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+/* =------------- Typography ----------*/
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px 0px;
+    line-height: 30px
+}
+
+p {
+    font-size: 12px;
+    margin: .75em 0
+}
+
+
+.error {
+    display: none;
+}
+
+.info-box input, .info-box textarea, .info-box select {
+    font-size: 14px;
+}
+
+/* =---------------- Styles ----------*/
+
+.panel {
+    position: relative;
+    border-width: 6px;
+    border-style: solid;
+    margin-bottom: 20px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.panel .content {
+    padding: 25px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.note, .adminmessage,
+.missing {
+    position: relative;
+    background: url("../images/info-icon.png") no-repeat scroll 15px 11px #FFFECD;
+    border: 1px solid #FFDE9F;
+    color: #855230;
+    margin: 15px 0;
+    padding: 1em 30px 1em 50px;
+    font-size: 12px
+}
+
+.poweredby {
+    clear: both;
+    padding-top: 10px;
+}
+
+p.poweredby a {
+    border: 0;
+    background: none;
+}
+
+p.poweredby a:hover {
+    background: none;
+    border: 0;
+}
+
+p a {
+    font-size: 16px;
+}
+
+p a[href='./?p=unsubscribe'] {
+    float: right;
+    font-size: 12px;
+    margin-top: 50px
+}
+
+/* ---------------- Table Styles ---------------- */
+
+.info-box table {
+    /*border: 1px solid #000;*/
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+    width: 100%;
+ }
+
+.info-box table td {
+    padding: 5px 10px;
+    margin: 1px;
+}
+
+.info-box form {
+    margin-top: 10px;
+}
+
+
+/* =---------------- Form Elements ----------*/
+
+input[type="text"],
+input[type="password"] {
+    margin: 5px 0;
+    padding: 6px;
+    border-width: 2px;
+    border-style: solid;
+    width: 80%;
+}
+
+textarea {
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    width: 80%;
+}
+
+select {
+    margin: 0 2px 0 0;
+    padding: 2px 1px 2px 5px;
+    background: none repeat scroll 0 0;
+    border-width: 1px;
+    border-style: solid;
+}
+
+input[type="submit"],
+p.button a, a.button {
+    position: relative;
+    margin: 5px 0;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+input:hover[type="submit"],
+a:hover.button, p.button a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+span.required, div.required {
+    color: #ff7676;
+}
+
+/* =---------------- Top Logo ----------*/
+
+#logo {
+    margin-top: 5px;
+    font-size: 48px;
+}
+
+/* =---------------- small screens ----------*/
+
+@media only screen and (max-width: 767px) {
+    .fixed #mainContent {
+        margin: 0 5px
+    }
+}
+
+/* end file:/lists/styles/subscribe.css   */

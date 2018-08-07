@@ -1,0 +1,26 @@
+body {
+    background: none;
+    color: rgb(235, 235, 235);
+}
+
+.container {
+    background-color: #161618;
+}
+
+.help-block {
+    color: #8f8f8f;
+}
+
+.btn-primary {
+    background-color: rgb(221, 125, 0);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(255, 145, 1);
+    border: none;
+}
+
+.webforms__heading {
+    color: rgb(236, 146, 28);
+}

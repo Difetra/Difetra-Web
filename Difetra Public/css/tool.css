@@ -1,0 +1,20 @@
+body {
+	background-color: #F5F5F5;
+	font-family: "Segoe UI";
+	color: #5F7489;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.content {
+	background-color: #FFFFFF;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 5px 10px 5px 10px;
+}
+.content-border {
+	border-radius: 3px;
+	border: 1px solid #ddd;
+}
+.divider {
+	border-bottom: 1px solid #eee;
+}

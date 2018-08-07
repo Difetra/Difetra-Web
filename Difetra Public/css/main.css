@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300');
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-color: #0f0f0f;
+	font-family: 'Roboto', sans-serif;
+	color: rgb(245, 245, 245);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+h1, h2, h3 {
+	font-weight: 300;
+	color: rgb(255, 152, 16);
+
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.header {
+	width: 100%;
+	background-color: #19191b;
+	transition: background-color 0.5s linear;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.header nav a{
+	color: #FFF;
+}
+
+.logo {
+	display:inline-block;
+}
+
+#collapse-toggle:hover {
+	cursor: unset;
+}
+
+.content { 
+	flex: 1 0 auto;
+	padding: 0 10px;
+	padding-bottom: 10px;
+}
+
+.notice {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 1px 2px black;
+}
+
+.button-list {
+	padding: 0;
+	display: inline-block; 
+	list-style: none;
+	margin: 0;
+}
+
+.button-list li {
+	display: inline-block;
+}
+
+.button-list a, #collapse-toggle {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.button-list a:visited, #collapse-toggle:visited {
+	color: inherit;
+}
+
+nav {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+nav  > * {
+	flex-grow: 1;
+}
+
+nav .button-list a, .logo {
+	font-size: 1.3em;
+	padding: 15px 10px;
+	margin-right: 5px;
+}
+
+nav .button-list {
+	text-align: right;
+}
+
+nav .button-list a {
+	box-shadow: 0 0px 0 #fff inset;
+	transition: box-shadow 0.1s linear;
+}
+
+nav .button-list a:hover { 
+	box-shadow: 0 -2px 0 #fff inset;
+}
+
+.collapsable{
+	display: none;
+}
+
+footer {
+	background-color: #19191b;
+	flex-shrink: 0;
+}
+
+.small-text {
+	font-size: 0.75em;
+	text-align: center;
+	margin-top: -10px;
+	opacity: 0.3
+}
+
+.media-links {
+	display: block;
+	text-align: center;
+}
+
+.media-links img {
+	max-height: 40px;
+	margin-right: 10px;
+	padding: 15px 10px;
+}
+
+
+.center {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+
+@media (max-width: 680px) {
+
+	nav {
+		padding: 0;
+		overflow: hidden;
+	}
+	nav .button-list {
+		text-align: center;
+		display: none;
+	}
+	#collapse-toggle:hover {
+		cursor: pointer;
+	}
+	.logo {
+		text-align: center;
+		margin-right: 0;
+	}
+	.collapsable {
+		display: inline;
+	}
+	nav .expand-nav {
+		display: block;
+	}
+}

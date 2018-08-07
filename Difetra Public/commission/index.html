@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta http-equiv="content-type" content="text/html">	
+  	<title>Commissions</title>
+	<!--IDEA: pan around example images using mouse position in example box-->
+	<link rel="stylesheet" type="text/css" href="/css/commission.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<nav class="center">
+				<div class="logo">
+					<a href="#" id="collapse-toggle"> DIFETRA <span class="collapsable">&#9776;</span></a>
+				</div>
+				<ul class="button-list">
+					<li><a href="/">Home</a></li>
+					<li><a href="/commission">Commission</a></li>
+					<li><a href="/ref/characters/">Characters</a></li>
+					<li><a href="/about.html">About</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="content">
+
+			<div class="commissions">
+				<div class="examples">
+					<div class="item sketch" data-com-type="sketch">
+						<div class="flex-container">
+							<div class="example">
+							
+							</div>
+							<div class="info">
+								<h2>Sketch</h2>
+								<p>$10-20</p>
+							</div>
+						</div>
+						<div class="item-description">Done in pencil, usually includes some light shading. Price will depend on complexity and background. I can throw on some color for $5.</div>
+					</div>
+					<div class="item paint-sketch" data-com-type="paint-sketch">
+						<div class="flex-container">
+							<div class="example">
+		
+							</div>
+							<div class="info">
+								<h2>Timed painting</h2>
+								<p>$10/hr</p>
+							</div>
+						</div>
+						<div class="item-description">
+							A grayscale painting - This option is rather experimental still. Refinement is dependent on the time given. 3 hours is usually enough to polish up most things, but added complexities such as background or multiple characters will affect that.
+							<br /><br />2 color options: standard like above or gradient toned. Gradient toned is usually 2-3 colors mapped to the different values of the painting (<a href="/image/examples/paint-sketch/Walk_color.jpg">Example</a>). This is considerably faster than standard color.
+						</div>
+					</div>
+					<div class="item painting" data-com-type="painting">
+						<div class="flex-container">
+							<div class="example">
+							
+							</div>
+							<div class="info">
+								<h2>Lined Painting</h2>
+								<p>$40-60</p>
+							</div>
+						</div>
+						<div class="item-description">
+							As you would expect, a painting with lines... mostly. Price largely dependent on complexity.
+						</div>
+					</div>
+					<div class="item painting-full" data-com-type="painting-full">
+						<div class="flex-container">
+							<div class="example">
+		
+							</div>
+							<div class="info">
+								<h2>Full Painting</h2>
+								<p>$70+</p>
+							</div>
+						</div>
+						<div class="item-description">
+							I pull out all the stops and make the best painting I possibly can.
+						</div>
+					</div>
+				</div>
+				<div class="description">
+					<h2>Commissions</h2>
+					<a href="./tos.html">Terms of Service</a>
+					<p>
+						If you're interested in something not listed here just ask and I'll be happy to work something out.<br />
+						For cost of shipping traditional art can be shipped if requested. The timeline for getting it to you is a little uncertain as I have to bike 5 miles to the post office.
+		
+						<h2>Prices</h2>
+							- Prices are aproximate. An exact number will be given after discussing the scope of work.<br />
+							- Additional characters are +%50 of base price. If only part of the character is shown I may charge less.<br />
+							- Going to be tuning prices as I figure things out. Time gets away from me while drawing. :p
+						<h2>What I'll draw</h2>
+							- general, mature, and adult themes are A-Okay.<br />
+							- Ponies, anthros, quadrupeds are all good to me, but I usually don't do humans<br />
+							- No problem with fetishes, but there are a couple things I don't do. See <a href="./tos.html#What_Ill_draw">this</a> for more detail.<br />
+							<h2>Contact</h2>
+							you may <a href="https://www.furaffinity.net/user/difetra/">send me a note</a> or <a href="mailto:art@difetra.com">email</a><br /><br />
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<ul class="button-list media-links center">
+				<li><a href="https://www.furaffinity.net/user/difetra/"><img src="/image/res/fa_logo.png" alt="Furaffinty"/></a></li>
+				<li><a href="https://inkbunny.net/Difetra"><img src="/image/res/inkbunny_logo.png" alt="Inkbunny"/></a></li>
+				<li><a href="https://twitter.com/DifetraArt"><img src="/image/res/Twitter_Logo_Blue.png" alt="Twitter"/></a></li>
+				<li><a href="https://picarto.tv/difetra"><img src="/image/res/picarto_logo.svg" width="50" height="50" alt="Picarto"/></a></li>
+			</ul>
+			<div class="small-text">Web design by Difetra</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/main.js"></script>
+	<script src="/scripts/mobile-chrome-vh-fix.js"></script>
+	<script>
+		//since this is small it shouldn't hurt to use a few globals...
+		var ITEMS
+		var EXAMPLE_TOGGLE = false;
+		function initialize() {
+			ITEMS = document.getElementsByClassName("item");
+			var vhFix = new VHChromeFix([
+				{selector:".flex-container", vh: 100}
+			]);
+
+			for (i = 0; i < ITEMS.length; i++) {
+				let item = ITEMS[i];
+				let example = item.querySelector(".example");
+				example.addEventListener("click", function() {
+					toggleInfo(item);
+					EXAMPLE_TOGGLE = !EXAMPLE_TOGGLE;
+				});
+			}
+		}
+		function generateExamples(type, callback) {
+			var xhr = new XMLHttpRequest();
+			xhr.addEventListener("load", function() {
+				var links = xhr.response.getElementsByTagName("a");
+				var images = [];
+				for (i = 0; i < links.length; i++) {
+					if (links[i].href.search(/(\.jpg|\.png)$/) !== -1) {
+						var image = document.createElement("img");
+						image.src = links[i].href;
+						images.push(image);
+					}
+				}
+				callback(images);
+			});
+			xhr.open("GET", "/image/examples/"+type);
+			xhr.responseType = "document";
+			xhr.send();
+		}
+		function toggleInfo(item) {
+			var currentExample = item.querySelector(".example");
+			var state = item.classList.toggle("expanded-item");
+			for (i = 0; i < ITEMS.length; i++) {
+				if (ITEMS[i] !== item) {
+					ITEMS[i].classList.toggle("collapsed-item");
+				}
+			}
+			if (state === true) {
+				var type = item.dataset.comType;
+				generateExamples(type, function(images) {
+					for (i = 0; i < images.length; i++) {
+						currentExample.appendChild(images[i]);
+					}
+				});
+			} else {
+				currentExample.innerHTML = "";
+			}
+			item.scrollIntoView(true);
+			window.scrollBy(0, -10);
+		}
+		initialize();
+
+	</script>
+</body>
+
+</html>

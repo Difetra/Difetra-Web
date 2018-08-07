@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Pavanam');
+
+body {
+	font-family: 'Pavanam', sans-serif;
+	font-size: 1rem;
+    color: #FFF;
+	background-size: cover;
+	margin: 10px;
+}
+
+a {
+	color:#ABBFD4;
+}
+
+a:visited {
+	color:#ABBFD4;
+}
+
+a:hover {
+	color: rgb(213, 232, 252);
+}
+
+p {
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+.paint-sketch .example {
+	background-image: url("/image/examples/paint-sketch/Bar_color.png");
+}
+
+.sketch .example {
+	background-image: url("/image/examples/sketch/DerpyTummyAche.jpg");
+}
+
+.color .example {
+	background-image: url("/image/examples/color/LyraAteBonBon.jpg");
+}
+
+.painting .example {
+	background-image: url("/image/examples/painting/drunkDeer_sfw_s.jpg");
+}
+
+.painting-full .example {
+	background-image: url("/image/examples/painting-full/rainydays_sfw.jpg");
+	background-position: right;
+}
+.commissions {
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.examples {
+    width: 100%;
+    position: relative;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.item {
+	background-color: #19191b;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+	flex: 1;
+	margin-right: 5px;
+	min-width: 250px;
+	transition: min-width 0.2s cubic-5bezier(.39,.58,.57,1);
+
+}
+
+.item:last-child {
+	border-right: none;
+	margin-right: 0px;
+}
+
+.item-description {
+	font-size: 1rem;
+	box-shadow: inset 0 1px 0 0 #444444;
+	border-top: 1px solid #000;
+	padding: 5px;
+	transition: max-height, opacity 0.2s ease-in-out;
+	height: auto;
+	max-height: 0px;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.example {
+    background-color: rgb(200, 200, 200);
+    background-size: cover;
+	background-position: center;
+	transition: box-shadow 0.1s linear;
+	flex-grow: 1;
+}
+
+.example:hover {
+	box-shadow: 0 0 5px 4px #FFF;
+	cursor: pointer;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.example img {
+	max-height: 100%;
+	animation: fadein 0.5s;
+}
+
+.info {
+    text-align: center;
+    border-top: 1px solid #000;
+    display: block;
+	background-color: #19191b;
+	margin-bottom: 10px;
+	flex-grow: 0;
+}
+
+.info p {
+    font-size: 26px;
+}
+
+.description {
+	display: block;
+	background-color: #19191b;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.collapsed-item {
+	max-width: 0px;
+	min-width: 0px;
+	margin-right: 0px;
+	overflow: hidden;
+}
+
+.expanded-item {
+	margin-right: 0px;
+}
+
+.expanded-item .example {
+	background-image: none;
+	overflow: auto;
+	display: flex;
+	flex-flow: row;
+	align-content: flex-start;
+}
+
+.expanded-item .item-description {
+	max-height: 300px;
+	opacity: 1;
+}
+
+.example img {
+	flex: 1 1 auto;
+	object-fit: cover;
+	transition: opacity 0.5s linear;
+}
+
+.flex-container {
+	display:flex;
+	flex-flow: column nowrap;
+	height: 90vh;
+	max-height: 800px;
+}
+
+@media (max-width: 1100px) {
+	.commissions {
+		  width: 100% !important;
+	}
+  
+	.flex-container {
+		height: 100vh;
+	}
+
+	.commissions {
+		margin-top: 0px;
+	}
+  }

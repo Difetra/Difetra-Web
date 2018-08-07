@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/png" href="/image/res/favicon.png">
+		<title>Difetra - 404</title>
+		<meta name="description" content="There could be art here. Right?">
+		<style>
+			body {
+				@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+				font-family: 'Open Sans', sans-serif;
+				background-color: #FEFEFE;
+			}
+
+			#notice {
+				position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+				font-size: 35px;
+				text-align: center;
+				color: #111111;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="notice">
+			<img src="/image/res/DerpyTummyAche.jpg" width="70%"/><br />
+			Derpy ate the page you were trying to access. She's sorry.
+		</p>
+	</body>
+</html>

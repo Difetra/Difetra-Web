@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300');
+
+h1 {
+	font-weight: 300;
+	color: rgb(230, 144, 30);
+	font-size: 2em;
+}
+
+
+.item-link {
+	text-decoration: unset;
+	color: inherit;
+}
+
+.item-link:visited {
+	text-decoration: unset;
+	color: inherit;
+}
+
+.box-item {
+	display: block;
+	margin-top: 10px;
+	height: 200px;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.portrait {
+	width: 150px;
+	height: 100%;
+	margin-right: 5px;
+	object-fit: cover;
+	float:left;
+
+}
+
+.info-box {
+	overflow: hidden;
+	height: 100%;
+	background-color: #19191b;
+	display: flex;
+	flex-direction: column;
+}
+
+.info-header {
+	border-bottom: 1px solid #000;
+	display: flex;
+}
+
+.name {
+	font-size: 2rem;
+	font-weight: 300;
+	padding-left: 10px;
+	color: rgb(230, 144, 30);
+}
+
+.label {
+	padding-left: 20px;
+	color: rgb(230, 144, 30);
+}
+
+/*fix scrolling for lower resolutions*/
+.about {
+	height: 100%;
+	padding: 10px;
+	color: rgb(223, 223, 223);
+	overflow-y: auto;
+	flex: 1;
+}
+
+.align-right {
+	float: right;
+	align-self: center;
+	margin: 0 auto;
+	margin-right: 10px;
+}
+
+.character-button {
+	display:inline-block;
+	text-align: center;
+	width: 100%;
+	border-top: 1px solid #000;
+	padding: 5px 0px;
+	font-size: 1.2rem;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgb(175, 175, 175);
+}
+
+.character-button:hover{
+	color: #fff;
+	background-color: #222225;
+}

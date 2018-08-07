@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: url("/image/res/HorseStomach.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#notice {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	font-size: 35px;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 0 1px 2px black;
+}
+.sub-text {
+	font-size: 16px;
+	font-style: italic;
+}
+#footer {
+	text-align: center;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	width:100%;
+	margin-bottom: 15px;
+
+}
+#stream_status {
+	display: block;
+	text-align: center;
+}
+
+#footer img {
+	height: 70px;
+	display: inline-block;
+	padding-right:10px;
+	filter: drop-shadow(1px 1px 1px black);
+	transition: 0.1s filter linear;
+}
+
+#footer img:hover {
+	filter: drop-shadow(1px 1px 5px white)
+}
